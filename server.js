@@ -1,4 +1,11 @@
-const name = "Miriam";
-const greeting = `Hello, my name is ${name}!`;
-console.log(greeting);
-// "Hello, my name is Miriam!"
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
